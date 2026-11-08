@@ -1,0 +1,127 @@
+import { LevelConfig, UpgradeItemConfig } from './types';
+
+export const LEVELS: LevelConfig[] = [
+  {
+    id: 'pine_needle_lane',
+    name: 'Pine Needle Lane',
+    subtitle: 'Cozy Suburban Neighborhood & Cul-de-Sacs',
+    difficulty: 'Cozy',
+    targetClearPct: 80,
+    totalSnowGoalKg: 1200,
+    mapSize: { width: 90, depth: 90 },
+    snowDensity: 1.0,
+    timeOfDay: 'morning',
+    rewardCash: 350,
+    description: 'Fresh morning snow blanketed the neighborhood driveways! Plow the main avenue, side lanes, and suburban cul-de-sacs.',
+  },
+  {
+    id: 'frostpeak_village',
+    name: 'Frostpeak Alpine Village',
+    subtitle: 'Mountain Town Square, Bakery & Ice Rink',
+    difficulty: 'Moderate',
+    targetClearPct: 85,
+    totalSnowGoalKg: 2400,
+    mapSize: { width: 110, depth: 110 },
+    snowDensity: 1.2,
+    timeOfDay: 'sunset',
+    rewardCash: 650,
+    description: 'Golden hour in the alpine village. Clear the town square boulevard, market stalls, and winding hillside roads before nightfall.',
+  },
+  {
+    id: 'glacier_depot',
+    name: 'Glacier Ridge Summit Depot',
+    subtitle: 'Heavy Mountain Pass & Airport Runway',
+    difficulty: 'Heavy Blizzard',
+    targetClearPct: 88,
+    totalSnowGoalKg: 4200,
+    mapSize: { width: 130, depth: 130 },
+    snowDensity: 1.5,
+    timeOfDay: 'night',
+    rewardCash: 1200,
+    description: 'A blizzard hit the high mountain depot! Heavy snowdrifts block the runway and loading bays. Clear the ice and keep traffic moving.',
+  },
+  {
+    id: 'endless_chill',
+    name: 'Cozy Evergreen Sanctuary',
+    subtitle: 'Endless Zen Plowing & Lo-Fi Synths',
+    difficulty: 'Zen / Endless',
+    targetClearPct: 100,
+    totalSnowGoalKg: 99999,
+    mapSize: { width: 100, depth: 100 },
+    snowDensity: 1.0,
+    timeOfDay: 'sunset',
+    rewardCash: 500,
+    description: 'No timers, no pressure. Free plowing in a serene snowy valley accompanied by peaceful generative winter synths.',
+  },
+];
+
+export const UPGRADES_CONFIG: UpgradeItemConfig[] = [
+  {
+    id: 'bladeLevel',
+    name: 'Snow Plow Blade',
+    icon: 'Shield',
+    description: 'Wider reinforced plow blades clear larger swaths of snow in a single pass.',
+    levels: [
+      { level: 1, title: 'Standard Steel Blade (2.4m)', cost: 0, statsText: 'Standard 2.4m clearance' },
+      { level: 2, title: 'Heavy Highway Blade (3.2m)', cost: 200, statsText: '+33% clearing width' },
+      { level: 3, title: 'Articulated V-Plow (4.0m)', cost: 500, statsText: '+66% clearing width & dual-wing displacement' },
+      { level: 4, title: 'Titan Blizzard Beast (4.8m)', cost: 1100, statsText: '+100% mega clearing width & instant snowbanks' },
+    ],
+  },
+  {
+    id: 'engineLevel',
+    name: 'Engine Torque & Power',
+    icon: 'Gauge',
+    description: 'High-torque turbo diesel engine increases top speed and cuts through thick snow without slowing down.',
+    levels: [
+      { level: 1, title: 'Stock Diesel V6', cost: 0, statsText: 'Base speed 13 km/h' },
+      { level: 2, title: 'Turbocharged V8 Intercooler', cost: 180, statsText: '+25% speed & snow penetration' },
+      { level: 3, title: 'Heavy Duty Hauler Rig', cost: 450, statsText: '+50% speed & high torque' },
+      { level: 4, title: 'Apex Blizzard Engine 600HP', cost: 950, statsText: '+80% speed & unstoppable momentum' },
+    ],
+  },
+  {
+    id: 'boostLevel',
+    name: 'Nitro Snow Thrusters',
+    icon: 'Zap',
+    description: 'Press [SPACE] or tap Boost to unleash rocket thrusters and blast through giant snowdrifts at extreme velocity.',
+    levels: [
+      { level: 1, title: 'None Installed', cost: 0, statsText: 'No nitro booster' },
+      { level: 2, title: 'Nitrous Injectors Mark I', cost: 250, statsText: '3s boost duration · 8s recharge' },
+      { level: 3, title: 'Dual Cryo-Thrust System', cost: 650, statsText: '5s boost duration · 5s fast recharge' },
+    ],
+  },
+  {
+    id: 'blowerLevel',
+    name: 'Roof Snow Blower Chute',
+    icon: 'Wind',
+    description: 'Shoots plowed snow high into the air in a scenic glittering arc, granting bonus combo points and cash.',
+    levels: [
+      { level: 0, title: 'Standard Side Casting', cost: 0, statsText: 'Normal snowbank push' },
+      { level: 1, title: 'Rotary Snow Blower Chute', cost: 300, statsText: 'Glittering snow plume + 40% bonus earnings' },
+      { level: 2, title: 'Dual Vortex High-Arc Blower', cost: 750, statsText: 'High-velocity snow geyser + 80% bonus earnings' },
+      { level: 3, title: 'Mega Blizzard Turbine', cost: 1400, statsText: 'Massive snow fountain + 120% bonus earnings' },
+    ],
+  },
+  {
+    id: 'saltLevel',
+    name: 'Thermal Blade / Salt Spreader',
+    icon: 'Flame',
+    description: 'Heated blade edge and rear salt spreader melt stubborn ice and boost cash multiplier on clean tarmac.',
+    levels: [
+      { level: 0, title: 'No Salt / Heat', cost: 0, statsText: 'Standard plowing' },
+      { level: 1, title: 'Rear Salt Spreader Hopper', cost: 220, statsText: '+20% cash earnings per kg' },
+      { level: 2, title: 'Thermal Heated Blade Edge', cost: 580, statsText: '+40% earnings & melts icy patches' },
+      { level: 3, title: 'Superheated Cryo-Melter', cost: 1200, statsText: '+60% earnings & instant vaporization' },
+    ],
+  },
+];
+
+export const TRUCK_PAINTS = [
+  { name: 'Alpine Safety Orange', hex: '#e65100', cost: 0 },
+  { name: 'Glacier Frost Cyan', hex: '#00838f', cost: 100 },
+  { name: 'Cozy Cranberry Red', hex: '#b71c1c', cost: 150 },
+  { name: 'Midnight Evergreen', hex: '#1b5e20', cost: 200 },
+  { name: 'Aurora Golden Blizzard', hex: '#f57f17', cost: 300 },
+  { name: 'Deep Arctic Navy', hex: '#0d47a1', cost: 350 },
+];
